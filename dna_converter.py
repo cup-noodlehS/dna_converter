@@ -50,17 +50,17 @@ while True:
 
         # protein
         for i in rna:
-            if i == ('UUU' or 'UUC'):
+            if i in ['UUU', 'UUC']:
                 protein.append('Phe')
             elif i in ['UUA', 'UUG']:
                 protein.append('Leu')
             elif list(i)[0] == 'U' and list(i)[1] == 'C':
                 protein.append('Ser')
-            elif i == ('UAU' or 'UAC'):
+            elif i in ['UAU', 'UAC']:
                 protein.append('Tyr')
-            elif i == ('UAA' or 'UAG'):
+            elif i in ['UAA', 'UAG']:
                 protein.append('Stop')
-            elif i == ('UGU' or 'UGC'):
+            elif i in ['UGU', 'UGC']:
                 protein.append('Cys')
             elif i == 'UGA':
                 protein.append('Stop')
@@ -70,25 +70,25 @@ while True:
                 protein.append('Leu')
             elif list(i)[0] == 'C' and list(i)[1] == 'C':
                 protein.append('Pro')
-            elif i == ('CAU' or 'CAC'):
+            elif i in ['CAU', 'CAC']:
                 protein.append('His')
-            elif i == ('CAA' or 'CAG'):
+            elif i in ['CAA', 'CAG']:
                 protein.append('Gln')
             elif list(i)[0] == 'C' and list(i)[1] == 'G':
                 protein.append('Arg')
-            elif i == ('AUU' or 'AUC' or 'AUA'):
+            elif i in ['AUU', 'AUC', 'AUA']:
                 protein.append('Ile')
             elif i == 'AUG':
                 protein.append('Met')
             elif list(i)[0] == 'A' and list(i)[1] == 'C':
                 protein.append('Thr')
-            elif i == ('AAU' or 'AAC'):
+            elif i in ['AAU', 'AAC']:
                 protein.append('Asn')
-            elif i == ('AAA' or 'AAG'):
+            elif i in ['AAA' or 'AAG']:
                 protein.append('Lys')
-            elif i == ('AGU' or 'AGC'):
+            elif i in ['AGU', 'AGC']:
                 protein.append('Ser')
-            elif i == ('AGA' or 'AGG'):
+            elif i in ['AGA', 'AGG']:
                 protein.append('Arg')
             elif list(i)[0] == 'G' and list(i)[1] == 'U':
                 protein.append('Val')
@@ -96,7 +96,7 @@ while True:
                 protein.append('Ala')
             elif i in ['GAC', 'GAU']:
                 protein.append('Asp')
-            elif i == ('GAA' or 'GAG'):
+            elif i in ['GAA', 'GAG']:
                 protein.append('Glu')
             elif list(i)[0] == 'G' and list(i)[1] == 'G':
                 protein.append('Gly')
