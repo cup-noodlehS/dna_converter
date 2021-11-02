@@ -17,14 +17,13 @@ def dna_convervter(dna):
         else:
             continue
     for letters in yehh:
-        if letters.lower() == 'a':
-            three_guy += 'A'
-        elif letters.lower() == 't':
-            three_guy += 'T'
-        elif letters.lower() == 'g':
-            three_guy += 'G'
-        elif letters.lower() == 'c':
-            three_guy += 'C'
+        dna_letter = {
+            'a': 'A',
+            't': 'T',
+            'g': 'G',
+            'c': 'C'
+        }
+        three_guy += dna_letter[letters]
         if count == 3:
             count = 1
             dna.append(three_guy)
@@ -34,14 +33,13 @@ def dna_convervter(dna):
     three_guy = ''
     # rna
     for letters_rna in yehh:
-        if letters_rna.lower() == 'a':
-            three_guy += 'U'
-        elif letters_rna.lower() == 't':
-            three_guy += 'A'
-        elif letters_rna.lower() == 'g':
-            three_guy += 'C'
-        elif letters_rna.lower() == 'c':
-            three_guy += 'G'
+        rna_letter = {
+            'a': 'U',
+            't': 'A',
+            'g': 'C',
+            'c': 'G'
+        }
+        three_guy += rna_letter[letters_rna]
         if count == 3:
             count = 1
             rna.append(three_guy)
@@ -95,7 +93,7 @@ def dna_convervter(dna):
             protein.append('Val')
         elif list(i)[0] == 'G' and list(i)[1] == 'C':
             protein.append('Ala')
-        elif i == ('GAU' or 'GAC'):
+        elif i in ['GAC', 'GAU']:
             protein.append('Asp')
         elif i == ('GAA' or 'GAG'):
             protein.append('Glu')
